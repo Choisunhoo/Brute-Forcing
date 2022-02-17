@@ -1,0 +1,14 @@
+# 시각
+# 구하고 싶은 시간을 입력
+h = int(input())
+# 3이 들어간 개수를 새기위한 변수 cnt 생성
+cnt = 0 
+# 시간, 분, 초를 전부 탐색하는 완전탐색 시작
+for i in range(h+1):
+    for j in range(60):
+        for k in range(60):
+            # 문자열에서 3과 같은게 하나라도 있으면 cnt를 추가 
+            if "3" in str(i) + str(j) + str(k):
+                cnt += 1
+# 결과 출력
+print(cnt)
